@@ -1,12 +1,11 @@
-from peewee import CharField, DateTimeField, UUIDField
-from src.models.BaseModel import BaseModel
+import uuid
+from peewee import CharField, UUIDField
+from src.database.models.BaseModel import BaseModel
 
 class User(BaseModel):
-    user_id = UUIDField(primary_key=True)
-    created = DateTimeField()
-    modified = DateTimeField()
+    user_id = UUIDField(primary_key=True, default=uuid.uuid4)
     first_name = CharField()
-    last_name = CharField()
+    last_name = CharField(null=True)
     email = CharField(unique=True)
     password = CharField()
     username = CharField(unique=True)

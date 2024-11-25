@@ -2,9 +2,9 @@ from enum import Enum
 
 from peewee import CharField, ForeignKeyField, UUIDField
 
-from src.models.BaseModel import BaseModel
-from src.models.Exercise import Exercise
-from src.models.Muscle import Muscle
+from src.database.models.BaseModel import BaseModel
+from src.database.models.Exercise import Exercise
+from src.database.models.Muscle import Muscle
 
 
 class TargetEnum(Enum):
@@ -23,7 +23,7 @@ class ExerciseMuscle(BaseModel):
     id = UUIDField(primary_key=True)
     exercise = ForeignKeyField(Exercise, backref='muscles')
     muscle = ForeignKeyField(Muscle, backref='exercises')
-    target = CharField(choices=[(target.key, target.value) for target in TargetEnum])
+    target = CharField(choices=[(target.name, target.value) for target in TargetEnum])
     
     def __str__(self):
         return f'{self.exercise} | {self.muscle}'

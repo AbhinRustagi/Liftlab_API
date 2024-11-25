@@ -1,23 +1,22 @@
-from peewee import CharField, UUIDField
+from peewee import CharField, AutoField
 
-from src.models.BaseModel import BaseModel
+from src.database.models.BaseModel import BaseModel
 
-
-class Tag(BaseModel):
+class MuscleGroup(BaseModel):
     '''
-    Tag model
+    MuscleGroup model
     '''
-    id = UUIDField(primary_key=True)
+    id = AutoField(primary_key=True)
     name = CharField()
-
+    
     def __str__(self):
         return f'{self.name}'
-
+    
     def __repr__(self):
         return f'{self.name}'
-
+    
     def __eq__(self, other):
         return self.name == other.name
-
+    
     def __ne__(self, other):
         return self.name != other.name

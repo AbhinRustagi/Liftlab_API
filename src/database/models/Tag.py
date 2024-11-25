@@ -1,22 +1,22 @@
-from src.models.BaseModel import BaseModel
+from peewee import CharField, UUIDField
 
-from peewee import CharField, AutoField
+from src.database.models.BaseModel import BaseModel
 
-class VariationType(BaseModel):
+class Tag(BaseModel):
     '''
-    VariationType model
+    Tag model
     '''
-    id = AutoField(primary_key=True)
-    name = CharField(unique=True)
-    
+    id = UUIDField(primary_key=True)
+    name = CharField()
+
     def __str__(self):
         return f'{self.name}'
-    
+
     def __repr__(self):
         return f'{self.name}'
-    
+
     def __eq__(self, other):
         return self.name == other.name
-    
+
     def __ne__(self, other):
         return self.name != other.name

@@ -1,7 +1,7 @@
 from peewee import CharField, ForeignKeyField, UUIDField
 
-from src.models.BaseModel import BaseModel
-from src.models.MuscleGroup import MuscleGroup
+from src.database.models.BaseModel import BaseModel
+from src.database.models.MuscleGroup import MuscleGroup
 
 
 class Muscle(BaseModel):

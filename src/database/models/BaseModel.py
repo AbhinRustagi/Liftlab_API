@@ -8,7 +8,6 @@ class BaseModel(Model):
     '''
     Base model for all models
     '''
-    
     created = DateTimeField(default=datetime.now)
     updated = DateTimeField(default=datetime.now)
 

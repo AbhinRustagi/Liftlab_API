@@ -1,10 +1,11 @@
 import os
 
 from flask import Flask
+from src.database.utils import close_db, connect_db, initialize_models
 
 def create_app(test_config=None):
     # create and configure the app
-    app = Flask(__name__, instance_relative_config=True)
+    app = Flask(__name__)
     app.config.from_mapping(
         SECRET_KEY='dev',
         DATABASE=os.path.join(app.instance_path, 'src.db'),
@@ -22,6 +23,17 @@ def create_app(test_config=None):
         os.makedirs(app.instance_path)
     except OSError:
         pass
+
+    @app.before_request
+    def before_request():
+        connect_db()
+
+    @app.teardown_request
+    def teardown_request(exception):
+        close_db()
+
+    with app.app_context():
+        initialize_models()
 
     # a simple page that says hello
     @app.route('/')
