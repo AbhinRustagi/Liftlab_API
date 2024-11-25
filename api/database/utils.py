@@ -1,7 +1,7 @@
 from peewee import Model
 
 
-from src.database.models import models, db
+from api.database.models import models, db
 
 # Initialize the database
 

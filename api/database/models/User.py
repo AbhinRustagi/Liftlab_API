@@ -1,6 +1,6 @@
 import uuid
 from peewee import CharField, UUIDField
-from src.database.models.BaseModel import BaseModel
+from api.database.models.BaseModel import BaseModel
 
 class User(BaseModel):
     user_id = UUIDField(primary_key=True, default=uuid.uuid4)

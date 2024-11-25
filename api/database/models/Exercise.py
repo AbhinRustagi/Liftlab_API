@@ -1,7 +1,7 @@
 from peewee import CharField, ForeignKeyField, UUIDField
 
-from src.database.models.Tag import Tag
-from src.database.models.BaseModel import BaseModel
+from api.database.models.Tag import Tag
+from api.database.models.BaseModel import BaseModel
 
 class Exercise(BaseModel):
     '''

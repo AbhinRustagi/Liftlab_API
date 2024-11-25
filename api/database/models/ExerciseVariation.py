@@ -1,8 +1,8 @@
 from peewee import CharField, ForeignKeyField, UUIDField
 
-from src.database.models.BaseModel import BaseModel
-from src.database.models.Exercise import Exercise
-from src.database.models.VariationType import VariationType
+from api.database.models.BaseModel import BaseModel
+from api.database.models.Exercise import Exercise
+from api.database.models.VariationType import VariationType
 
 
 class ExerciseVariation(BaseModel):

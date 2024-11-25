@@ -1,7 +1,7 @@
 from peewee import ForeignKeyField, IntegerField, UUIDField
 
-from src.database.models.BaseModel import BaseModel
-from src.database.models.WorkoutExercise import WorkoutExercise
+from api.database.models.BaseModel import BaseModel
+from api.database.models.WorkoutExercise import WorkoutExercise
 
 
 class WorkoutExerciseSet(BaseModel):

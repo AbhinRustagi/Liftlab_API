@@ -1,8 +1,8 @@
 from peewee import (DateField, ForeignKeyField, IntegerField, TextField,
                     UUIDField)
 
-from src.database.models.BaseModel import BaseModel
-from src.database.models.Workout import Workout
+from api.database.models.BaseModel import BaseModel
+from api.database.models.Workout import Workout
 
 
 class WorkoutLog(BaseModel):

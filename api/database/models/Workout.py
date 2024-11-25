@@ -1,7 +1,7 @@
 from peewee import CharField, ForeignKeyField, UUIDField
 
-from src.database.models.BaseModel import BaseModel
-from src.database.models.User import User
+from api.database.models.BaseModel import BaseModel
+from api.database.models.User import User
 
 
 class Workout(BaseModel):

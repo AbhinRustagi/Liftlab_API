@@ -2,9 +2,9 @@ from enum import Enum
 
 from peewee import CharField, CompositeKey, ForeignKeyField, IntegerField, UUIDField
 
-from src.database.models.BaseModel import BaseModel
-from src.database.models.Exercise import Exercise
-from src.database.models.Workout import Workout
+from api.database.models.BaseModel import BaseModel
+from api.database.models.Exercise import Exercise
+from api.database.models.Workout import Workout
 
 
 class SetsTypeEnum(Enum):

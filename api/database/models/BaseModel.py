@@ -2,7 +2,7 @@ from datetime import datetime
 
 from peewee import DateTimeField, Model, SqliteDatabase
 
-db = SqliteDatabase('src.db')
+db = SqliteDatabase('app.db')
 
 class BaseModel(Model):
     '''

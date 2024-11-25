@@ -1,6 +1,6 @@
 from peewee import CharField, UUIDField
 
-from src.database.models.BaseModel import BaseModel
+from api.database.models.BaseModel import BaseModel
 
 class Tag(BaseModel):
     '''

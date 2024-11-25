@@ -1,13 +1,13 @@
+from api.database.models.BaseModel import BaseModel
+
 from peewee import CharField, AutoField
 
-from src.database.models.BaseModel import BaseModel
-
-class MuscleGroup(BaseModel):
+class VariationType(BaseModel):
     '''
-    MuscleGroup model
+    VariationType model
     '''
     id = AutoField(primary_key=True)
-    name = CharField()
+    name = CharField(unique=True)
     
     def __str__(self):
         return f'{self.name}'

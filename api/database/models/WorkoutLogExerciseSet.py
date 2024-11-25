@@ -1,9 +1,9 @@
 # WorkoutLogExerciseSet(log_id, workout_exercise_set_id, completed_reps)
 from peewee import CompositeKey, ForeignKeyField, IntegerField
 
-from src.database.models.BaseModel import BaseModel
-from src.database.models.WorkoutExerciseSet import WorkoutExerciseSet
-from src.database.models.WorkoutLog import WorkoutLog
+from api.database.models.BaseModel import BaseModel
+from api.database.models.WorkoutExerciseSet import WorkoutExerciseSet
+from api.database.models.WorkoutLog import WorkoutLog
 
 
 class WorkoutLogExerciseSet(BaseModel):
